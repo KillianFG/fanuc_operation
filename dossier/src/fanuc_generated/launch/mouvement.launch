@@ -1,0 +1,7 @@
+<launch>
+
+  <include file="$(find fanuc_generated)/launch/demo.launch"/>
+
+  <node name="plan_fanuc" pkg="fanuc_generated" type="plan_fanuc" respawn="false" output="screen"/>
+
+</launch>

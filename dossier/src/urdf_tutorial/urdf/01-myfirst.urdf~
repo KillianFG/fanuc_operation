@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="1" radius="0.1"/>
+      </geometry>
+      <origin rpy="1.57075 0 0" xyz="0 0 0.8"/>
+      <material name="blue">
+        <color rgba="0 0 .8 1"/>
+      </material>
+    </visual>
+  </link>
+  <link name="sermant">
+    <visual>
+      <geometry>
+        <cylinder length="0.2" radius="0.01"/>
+      </geometry>
+      <origin rpy="0 1.57075 0" xyz="0.2 0 0.8"/>
+    </visual>
+  </link>
+
+  <joint name="base_to_right_leg" type="fixed">
+    <parent link="base_link"/>
+    <child link="sermant"/>
+  </joint>
+
+</robot>
